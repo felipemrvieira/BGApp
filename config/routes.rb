@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :alunos
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'aluno/novo', to: 'alunos#new'
+  resources :alunos, except: [:new]
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end

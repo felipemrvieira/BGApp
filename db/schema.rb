@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201235119) do
+ActiveRecord::Schema.define(version: 20180202001330) do
 
   create_table "alunos", force: :cascade do |t|
     t.string "nome"
     t.string "email"
-    t.string "senha"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
+    t.string "password_digest"
   end
 
 end
