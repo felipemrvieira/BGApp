@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+
   get 'aluno/novo', to: 'alunos#new'
   resources :alunos, except: [:new]
   get 'login', to: 'sessions#new'
