@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
         if aluno && aluno.authenticate(params[:session][:password])
             session[:aluno_id] = aluno.id
             flash[:success] = "You have successfully logged in"
-            redirect_to aluno_path(aluno)
+            redirect_to posts_path
         else
             flash.now[:danger] = "There was something wrong with your login information"
             render 'new'
